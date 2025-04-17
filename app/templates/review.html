@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row mb-3 d-flex flex-grow-1 align-items-center justify-content-center">
+    <div class="col-10">
+        <form method="POST">
+            <div class="row">
+                <div class="mb-3">
+                    <label class="col-form-label-lg" for="FormRating">Оценка</label>
+                    <select name="rating" class="form-control" id="FormRating">
+                        <option value="5" selected>Отлично</option>
+                        <option value="4">Хорошо</option>
+                        <option value="3">Удовлетворительно</option>
+                        <option value="2">Неудовлетворительно</option>
+                        <option value="1">Плохо</option>
+                        <option value="0">Ужасно</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <label class="col-form-label-lg" for="FormReview">Отзыв</label>
+                    <textarea name="review" class="form-control" id="FormReview"></textarea>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Сохранить</button>
+        </form> 
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row d-flex flex-grow-1 align-items-center justify-content-center">
+    <div class="col-8">
+        <form method="POST">
+            <div class="mb-3">
+                <label class="col-form-label-lg" for="FormLogin">Логин</label>
+                <input type="login" name="login" id="FormLogin" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="col-form-label-lg" for="FormPassword">Пароль</label>
+                <input type="password" name="password" id="FormLogin" class="form-control" required>
+            </div>
+            <div class="mb-3 form-check">
+                <input type="checkbox" class="form-check-input" name="remember" id="FormCheck">
+                <label class="form-check-label" for="FormCheck">Запомнить меня</label>
+            </div>
+              <button type="submit" class="btn btn-primary">Войти</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

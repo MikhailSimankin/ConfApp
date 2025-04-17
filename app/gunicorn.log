@@ -1,0 +1,39 @@
+[2024-06-25 02:36:35 +0300] [4736] [INFO] Starting gunicorn 22.0.0
+[2024-06-25 02:36:35 +0300] [4736] [INFO] Listening at: http://127.0.0.1:5555 (4736)
+[2024-06-25 02:36:35 +0300] [4736] [INFO] Using worker: sync
+[2024-06-25 02:36:35 +0300] [4740] [INFO] Booting worker with pid: 4740
+[2024-06-28 22:30:19 +0300] [4736] [INFO] Handling signal: term
+[2024-06-28 22:30:19 +0300] [4740] [INFO] Worker exiting (pid: 4740)
+[2024-06-28 22:30:19 +0300] [4736] [INFO] Shutting down: Master
+[2024-06-28 22:30:21 +0300] [8006] [INFO] Starting gunicorn 22.0.0
+[2024-06-28 22:30:21 +0300] [8006] [INFO] Listening at: http://127.0.0.1:5555 (8006)
+[2024-06-28 22:30:21 +0300] [8006] [INFO] Using worker: sync
+[2024-06-28 22:30:21 +0300] [8007] [INFO] Booting worker with pid: 8007
+[2024-07-27 22:53:00 +0300] [8006] [INFO] Handling signal: term
+[2024-07-27 22:53:00 +0300] [8007] [INFO] Worker exiting (pid: 8007)
+[2024-07-27 22:53:00 +0300] [8006] [INFO] Shutting down: Master
+[2024-07-28 02:34:43 +0300] [9] [INFO] Starting gunicorn 22.0.0
+[2024-07-28 02:34:43 +0300] [9] [INFO] Listening at: http://127.0.0.1:5555 (9)
+[2024-07-28 02:34:43 +0300] [9] [INFO] Using worker: sync
+[2024-07-28 02:34:44 +0300] [14] [INFO] Booting worker with pid: 14
+[2024-08-19 14:27:48 +0300] [9] [INFO] Handling signal: term
+[2024-08-19 14:27:48 +0300] [14] [INFO] Worker exiting (pid: 14)
+[2024-08-19 14:27:49 +0300] [9] [INFO] Shutting down: Master
+[2024-08-19 15:07:34 +0300] [9] [INFO] Starting gunicorn 22.0.0
+[2024-08-19 15:07:34 +0300] [9] [INFO] Listening at: http://127.0.0.1:5555 (9)
+[2024-08-19 15:07:34 +0300] [9] [INFO] Using worker: sync
+[2024-08-19 15:07:34 +0300] [14] [INFO] Booting worker with pid: 14
+[2024-09-03 17:34:28 +0300] [9] [INFO] Handling signal: term
+[2024-09-03 17:34:28 +0300] [14] [INFO] Worker exiting (pid: 14)
+[2024-09-03 17:34:28 +0300] [9] [INFO] Shutting down: Master
+[2024-09-04 02:16:08 +0300] [9] [INFO] Starting gunicorn 22.0.0
+[2024-09-04 02:16:08 +0300] [9] [INFO] Listening at: http://127.0.0.1:5555 (9)
+[2024-09-04 02:16:08 +0300] [9] [INFO] Using worker: sync
+[2024-09-04 02:16:08 +0300] [14] [INFO] Booting worker with pid: 14
+[2024-09-27 23:52:13 +0300] [9] [INFO] Handling signal: term
+[2024-09-27 23:52:13 +0300] [14] [INFO] Worker exiting (pid: 14)
+[2024-09-27 23:52:13 +0300] [9] [INFO] Shutting down: Master
+[2024-09-28 00:52:04 +0300] [9] [INFO] Starting gunicorn 22.0.0
+[2024-09-28 00:52:04 +0300] [9] [INFO] Listening at: http://127.0.0.1:5555 (9)
+[2024-09-28 00:52:04 +0300] [9] [INFO] Using worker: sync
+[2024-09-28 00:52:04 +0300] [15] [INFO] Booting worker with pid: 15

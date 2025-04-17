@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% block content %}
+{{ set_visit(book.book_id) }}
+<div class="row d-flex flex-grow-1 align-items-center justify-content-center">
+    <div class="card g-0 my-5 d-flex">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{{ url_for('static', filename='covers/' + get_cover(book.book_cover)) }}" class="card-img" alt="Обложка">
+            </div>
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h1 class="card-title mb-5">{{ book.book_name }}</h1>
+                    <h2 class="card-subtitle mb-4">{{ book.book_author }}</h2>
+                    <h3 class="card-subtitle mb-4 text-muted">{{ book.book_year }}</h3>
+                    <h3 class="card-subtitle mb-4 text-muted">Издательство {{ book.book_publisher }}</h3>
+                    <h4 class="card-subtitle mb-5">{{ get_book_genres(book.book_id) }}</h4>
+                    <h5 class="card-subtitle mb-5 text-muted">{{ book.book_size }} стр.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="col-12 mb-5">
+        {{ markdown.markdown(book.book_description)|safe }}
+    </div>
+    {% if current_user.is_authenticated %}
+        <div class="col-12 mb-5">
+            {% if current_user.review(book.book_id) %}
+                <a href="{{ url_for('review', book_id=book.book_id) }}" class="btn btn-info">Оставить отзыв</a>
+            {% else %}
+                <h5>Ваш отзыв</h5>
+                <div class="card mb-5">
+                    <div class="card-header">
+                        <div class="col d-flex justify-content-between align-items-center">
+                            <h3>{{ get_login(user_review.review_user) }}</h3>
+                            <h5 class="text-muted">Оценка {{ user_review.review_rating }}</h5>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        {{ markdown.markdown(user_review.review_text)|safe }}
+                    </div>
+                    <div class="card-footer">
+                        {{ user_review.review_created_at }}
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    {% endif %}
+    <div class="col-12 mb-5">
+        {% for review in reviews %}
+            <div class="card mb-5">
+                <div class="card-header">
+                    <div class="col d-flex justify-content-between align-items-center">
+                        <h3>{{ get_login(review.review_user) }}</h3>
+                        <h5 class="text-muted">Оценка {{ review.review_rating }}</h5>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {{ markdown.markdown(review.review_text)|safe }}
+                </div>
+                <div class="card-footer">
+                    {{ user_review.review_created_at }}
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

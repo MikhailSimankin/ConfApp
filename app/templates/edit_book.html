@@ -1,0 +1,5 @@
+{% extends 'base.html' %}
+{% block content %}
+{% from 'form.html' import form %}
+{{ form(genres, extensions, name, year, publisher, author, size, description, book_genres) }}
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="row">
+    <div class="row">
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>id </th>
+                    <th>ФИО</th>
+                    <th>Название конференции</th>
+                    <th>Время посещения</th>
+                </tr>
+            </thead>
+            <tbody>
+            {% for statistic in statistics %}
+                <tr>
+                    <td>{{ statistic.statistic_id }}</td>
+                    <td>{{ get_fio(statistic.statistic_user) }}</td>
+                    <td>{{ get_book_name(statistic.statistic_book) }}</td>
+                    <td>{{ statistic.statistic_created_at }}</td>
+                </tr>
+            {%endfor%}
+            </tbody>
+        </table>
+    </div>
+    <div class="row my-5">
+        {{ pagination.links }}
+    </div>
+    <div class="row mb-5">
+        <div class="col">
+            <a class="btn btn-success" href="{{ url_for('export_csv') }}">Выгрузка CSV таблицы</a>
+        </div>
+    </div>
+</div>
+{% endblock %}
